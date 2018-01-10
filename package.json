@@ -1,0 +1,58 @@
+{
+  "name": "object-immutable-set",
+  "version": "0.0.1",
+  "description": "Immutably update an object",
+  "homepage": "https://github.com/GhystonSoftware/object-immutable-set",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --pretty",
+    "lint": "tslint ./src/**/*.ts",
+    "test": "jest",
+    "prepublish": "yarn lint && yarn build && yarn test --coverage"
+  },
+  "author": "Dean Merchant <dean.merchant@ghyston.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^22.0.1",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.2.4",
+    "tslint": "^5.8.0",
+    "tslint-react": "^3.3.3",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "coverageReporters": [
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "mapCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
+  }
+}

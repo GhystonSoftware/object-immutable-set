@@ -1,0 +1,10 @@
+.circleci/
+.idea/
+coverage/
+lib/index.test.*
+src/
+node_modules/
+Readme.md
+tsconfig.json
+tslint.json
+yarn.lock
