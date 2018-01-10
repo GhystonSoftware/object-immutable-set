@@ -7,7 +7,11 @@ Updated deeply nested objects in an immutable and type-safe way. Written and pro
 
 ## Usage
 
-`yarn add object-immutable-set` or using npm `npm install object-immutable-set --save`
+`yarn add object-immutable-set` 
+
+or using npm 
+
+`npm install object-immutable-set --save`
 
 ```typescript
 import { set } from 'object-immutable-set'
@@ -42,6 +46,8 @@ const deeplyNestedObject: ComplexObjectType = {
 
 const updatedObject: ComplexObjectType = set(deeplyNestedObject, ['b', 'c', 'd', 'deepProperty'], 'updated value')
 
+updatedObject.b.c.d.deepProperty // 'updated value'
+deeplyNestedObject.b.c.d.deepProperty // 'original value'
 updatedObject.b.c.d.deeper === deeplyNestedObject.b.c.d.deeper // true 
 
 ```
