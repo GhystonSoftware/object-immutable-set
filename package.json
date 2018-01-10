@@ -4,6 +4,7 @@
   "homepage": "https://github.com/GhystonSoftware/object-immutable-set",
   "author": "Dean Merchant <dean.merchant@ghyston.com>",
   "license": "ISC",
+  "files": ["lib"],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -55,5 +56,5 @@
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     }
   },
-  "version": "0.0.2"
+  "version": "0.1.0"
 }

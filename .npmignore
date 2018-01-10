@@ -1,7 +1,7 @@
 .circleci/
 .idea/
 coverage/
-lib/index.test.*
+lib/*.test.*
 src/
 node_modules/
 Readme.md
