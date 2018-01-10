@@ -1,17 +1,17 @@
 {
   "name": "object-immutable-set",
-  "version": "0.0.1",
   "description": "Immutably update an object",
   "homepage": "https://github.com/GhystonSoftware/object-immutable-set",
-  "main": "index.js",
+  "author": "Dean Merchant <dean.merchant@ghyston.com>",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --pretty",
     "lint": "tslint ./src/**/*.ts",
     "test": "jest",
     "prepublish": "yarn lint && yarn build && yarn test --coverage"
   },
-  "author": "Dean Merchant <dean.merchant@ghyston.com>",
-  "license": "ISC",
   "devDependencies": {
     "@types/jest": "^22.0.1",
     "jest": "^21.2.1",
@@ -54,5 +54,6 @@
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     }
-  }
+  },
+  "version": "0.0.2"
 }
