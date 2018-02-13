@@ -1,4 +1,4 @@
-import { set } from './index'
+import { get, set } from './index'
 
 describe('set', () => {
   const initial = {a: {b: {c: 19}}, aa: 'shallow'}
@@ -141,5 +141,12 @@ describe('set', () => {
       expect(veryNestedResult.a.aa.aaa.aaaa).toBe(veryNestedObject.a.aa.aaa.aaaa)
       expect(veryNestedResult.a.ab.aaa.aaaa).toBe(veryNestedObject.a.ab.aaa.aaaa)
     })
+  })
+})
+
+describe('get', () => {
+  it('Can access a deeply nested value', () => {
+    const value = get({ a: { b: { c: { d: 5 } } } }, ['a', 'b', 'c', 'd'])
+    expect(value).toBe(5)
   })
 })
